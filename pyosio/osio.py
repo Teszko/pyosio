@@ -1394,7 +1394,7 @@ class OpenSensorsAPI():
         response = self._delete(url, ["v1", "v2"])
         return True if response.status_code in [200, 204, 422] else False
 
-    def delete_org_device(self, org_id, client_id, update_device_input):
+    def update_org_device(self, org_id, client_id, update_device_input):
         """
                 Update device metadata
                 PUT /v1/orgs/{org-id}/devices/{client-id}

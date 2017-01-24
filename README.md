@@ -202,289 +202,289 @@ osio_client.get_pub_user_meta(user_id='')
 ``` 
 - Update user metadata
 ```python
-osio_client.update_user_meta(user_id, data)
+osio_client.update_user_meta(user_id='', data={})
 ``` 
 - Get user metadata
 ```python
-osio_client.get_user_meta(user_id)
+osio_client.get_user_meta(user_id='')
 ``` 
 - Get API key
 ```python
-osio_client.get_api_key(user_id)
+osio_client.get_api_key(user_id='')
 ``` 
 - Generate a new API key
 ```python
-osio_client.generate_api_key(user_id)
+osio_client.generate_api_key(user_id='')
 ``` 
 - Create a bookmark for a given user and topic
 ```python
-osio_client.bookmark_topic(user_id, topic)
+osio_client.bookmark_topic(user_id='', topic='')
 ``` 
 - Delete a bookmark for a given user and topic
 ```python    
-osio_client.delete_bookmarked_topic(user_id, topic)
+osio_client.delete_bookmarked_topic(user_id='', topic='')
 ``` 
 - Get bookmarks associated with a user
 ```python  
-osio_client.get_user_bookmarks(user_id)
+osio_client.get_user_bookmarks(user_id='')
 ``` 
 - Get users that bookmarked any of a given users topics
 ```python 
-osio_client.get_user_bookmarks_followers(user_id)
+osio_client.get_user_bookmarks_followers(user_id='')
 ``` 
 - Associate a device with a user, user joins the device creator s organisation
 ```python 
-osio_client.link_device_user(user_id, client_id)
+osio_client.link_device_user(user_id='', client_id='')
 ``` 
 - Retrieve device errors for a given user
 ```python 
-osio_client.get_user_device_errors(user_id)
+osio_client.get_user_device_errors(user_id='')
 ``` 
 - Create a new device for a user
 ```python 
-osio_client.set_device(user_id, create_device_input)
+osio_client.set_device(user_id='', create_device_input={})
 ``` 
 - Get devices associated with a user
 ```python 
-osio_client.get_user_devices(user_id):
+osio_client.get_user_devices(user_id=''):
 ``` 
 - Get device metadata
 ```python 
-osio_client.get_device_meta(user_id, client_id, queryparams)
+osio_client.get_device_meta(user_id='', client_id='', queryparams={})
 ``` 
 - Delete a device
 ```python 
-osio_client.delete_device(user_id, client_id)
+osio_client.delete_device(user_id='', client_id='')
 ``` 
 - Update device metadata
 ```python 
-osio_client.update_device_meta(user_id, client_id, update_device_input)
+osio_client.update_device_meta(user_id='', client_id='', update_device_input={})
 ``` 
 - Generate a new password for a device
 ```python 
-osio_client.reset_device_passw(user_id, client_id)
+osio_client.reset_device_passw(user_id='', client_id='')
 ``` 
 - Get information about the values of multiple devices with one call
 ```python 
-osio_client.get_user_devices_info(user_id, queryparams={})
+osio_client.get_user_devices_info(user_id='', queryparams={})
 ``` 
 - Delete devices in bulk (all in one transaction)
 ```python
-osio_client.delete_user_devices(user_id, device_del)
+osio_client.delete_user_devices(user_id='', device_del={})
 ``` 
 - Update the description, tags and location of multiple devices with one call]
 ```python
-osio_client.update_user_bulk_devices(user_id, bulk_update_params_input)
+osio_client.update_user_bulk_devices(user_id='', bulk_update_params_input={})
 ``` 
 - Create new devices in bulk (all in one transaction)
 ```python
-osio_client.set_user_bulk_devices(user_id, new_device)
+osio_client.set_user_bulk_devices(user_id='', new_device={})
 ``` 
 - Get pending org invitations for a user
 ```python
-osio_client.get_user_org_invits(user_id)
+osio_client.get_user_org_invits(user_id='')
 ``` 
 - Get organisations a user is member of
 ```python
-osio_client.get_user_orgs(user_id)
+osio_client.get_user_orgs(user_id='')
 ``` 
 - Leave an organisation (stop being a member)
 ```python
-osio_client.delete_user_org(user_id, org_id)
+osio_client.delete_user_org(user_id='', org_id='')
 ``` 
 - Get organisations a user owns
 ```python
-osio_client.get_user_owned_orgs(user_id)
+osio_client.get_user_owned_orgs(user_id='')
 ``` 
 - Get topics associated with a user
 ```python
-osio_client.get_user_topics(user_id)
+osio_client.get_user_topics(user_id='')
 ``` 
 - Retrieve usage stats for a given user
 ```python
-osio_client.get_user_stats(user_id)
+osio_client.get_user_stats(user_id='')
 ``` 
 - Get datasets associated with a user
 ```python
-osio_client.get_user_datasets(user_id)
+osio_client.get_user_datasets(user_id='')
 ``` 
 - Get devices associated with a user
 ```python
-osio_client.get_user_devices(user_id)
+osio_client.get_user_devices(user_id='')
 ```
 - Get topics associated with a user
 ```python
-osio_client.get_user_topics(user_id)
+osio_client.get_user_topics(user_id='')
 ```
 - Bulk delete topics by ids
 ```python
-osio_client.delete_user_bulk_topics(user_id)
+osio_client.delete_user_bulk_topics(user_id='')
 ```
 #### orgs : Organisation operations
 - Create an organisation
 ```python
-osio_client.create_org(create_org_input)
+osio_client.create_org(create_org_input={})
 ```
 - Update organisation metadata
 ```python
-osio_client.update_org(org_id)
+osio_client.update_org(org_id='')
 ```
 - Delete an organisation. Be careful! This is will also delete devices and topics
 ```python
-osio_client.delete_org(org_id)
+osio_client.delete_org(org_id='')
 ```
 - Get organisation metadata
 ```python
-osio_client.get_org_meta(org_id)
+osio_client.get_org_meta(org_id='')
 ```
 - Accept an organisation invitation
 ```python
-osio_client.accept_org_invit(org_id, tokens)
+osio_client.accept_org_invit(org_id='', tokens={})
 ```
 - Get devices associated with an organisation
 ```python    
-osio_client.get_org_devices(org_id)
+osio_client.get_org_devices(org_id='')
 ```
 - Get a device s associated organisation with a given batch and type
 ```python
-osio_client.get_filtered_org_devices(org_id, d_batch, d_type)
+osio_client.get_filtered_org_devices(org_id='', d_batch={}, d_type={})
 ```
 - Get device metadata
 ```python
-osio_client.get_org_device_meta(org_id, client_id)
+osio_client.get_org_device_meta(org_id='', client_id='')
 ```
 - Delete a device
 ```python
-osio_client.delete_org_device(org_id, client_id)
+osio_client.delete_org_device(org_id='', client_id='')
 ```
 - Update device metadata
 ```python
-osio_client.update_org_device(org_id, client_id, update_device_input)
+osio_client.update_org_device(org_id='', client_id='', update_device_input={})
 ```
 - Retrieve device errors for a given org
 ```python
-osio_client.get_org_device_errors(org_id)
+osio_client.get_org_device_errors(org_id='')
 ```
 - Get pending invitations for an organisation
 ```python
-osio_client.get_org_pending_invits(org_id)
+osio_client.get_org_pending_invits(org_id='')
 ```
 - Get members of an org
 ```python
-osio_client.get_org_members(org_id)
+osio_client.get_org_members(org_id='')
 ```
 - Invite user to join organisation (email will be sent)
 ```python
-osio_client.invite_user_to_org(org_id, user_id)
+osio_client.invite_user_to_org(org_id='', user_id='')
 ```
 - Delete a user from an organisation
 ```python
-osio_client.delete_user_from_org(org_id, user_id)
+osio_client.delete_user_from_org(org_id='', user_id='')
 ```
 - Resend an organisation invitation email
 ```python
-osio_client.reinvite_user_to_org(org_id, user_id)
+osio_client.reinvite_user_to_org(org_id='', user_id='')
 ```
 - Get invitation status for organisation and user
 ```python
-osio_client.get_invit_status(org_id, user_id)
+osio_client.get_invit_status(org_id='', user_id='')
 ```
 - Get topics associated with an organisation
 ```python
-osio_client.get_org_topics(org_id)
+osio_client.get_org_topics(org_id='')
 ```
 - Retrieve usage stats for a given org
 ```python
-osio_client.get_org_stats(org_id)
+osio_client.get_org_stats(org_id='')
 ```
 - Get public organisation metadata including topics [NO-AUTH]
 ```python
-osio_client.get_pub_org_meta(org_id)
+osio_client.get_pub_org_meta(org_id='')
 ```
 ### schemas : Schema operations
 - Get all the available schemas that can be applied to topics [NO-AUTH]
 ```python
-osio_client.get_schemas(org_id)
+osio_client.get_schemas(org_id='')
 ```
 #### topics : Topic operations
 
 - Get public topic information [NO-AUTH]
 ```python
-osio_client.get_pub_topic_info(topic)
+osio_client.get_pub_topic_info(topic='')
 ```
 - Search for public topics [NO-AUTH]
 ```python
-osio_client.search_pub_topic_info(topic)
+osio_client.search_pub_topic_info(topic='')
 ```
 - Create a topic
 ```python
-osio_client.set_topic(new_topic_input)
+osio_client.set_topic(new_topic_input={})
 ```
 - Delete a topic
 ```python
-osio_client.delete_topic(topic)
+osio_client.delete_topic(topic='')
 ```
 - Get topic metadata
 ```python
-osio_client.get_topic_meta(topic)
+osio_client.get_topic_meta(topic='')
 ```
 - Update topic metadata
 ```python
-osio_client.update_topic_meta(topic, topic_input)
+osio_client.update_topic_meta(topic='', topic_input={})
 ```
 ### projects : Project operations
 - Get public project information [NO-AUTH]
 ```python
-osio_client.get_pub_proj_info(project_id)
+osio_client.get_pub_proj_info(project_id='')
 ```
 - Get public datasets for a given project [NO-AUTH]
 ```python
-osio_client.get_pub_datasets(project_id)
+osio_client.get_pub_datasets(project_id='')
 ```
 ### OpenSensors Real-Time API
 #### events : SSE streams for device & dataset event
 
 - Opens a SSE stream with debug events for a device
 ```python
-osio_client.get_device_sd(client_id)
+osio_client.get_device_sd(client_id='')
 ```
 - Opens a SSE stream for a public dataset [NO-AUTH]
 ```python
-osio_client.get_pub_sd(dataset_id)
+osio_client.get_pub_sd(dataset_id='')
 ```
 #### events : SSE streams for device & message event
 - Opens a SSE stream for all topics of an organisation
 ```python
-osio_client.get_org_topics_sd(org_id)
+osio_client.get_org_topics_sd(org_id='')
 ```
 - Opens a SSE stream for a given topic
 ```python
-osio_client.get_topics_sd(topic)
+osio_client.get_topics_sd(topic='')
 ```
 - Opens a SSE stream for bookmarked topics for a user
 ```python
-osio_client.get_user_bookmarked_topics_sd(user_id)
+osio_client.get_user_bookmarked_topics_sd(user_id='')
 ```
 - Opens a SSE stream for all topics for a user
 ```python
-osio_client.get_user_topics_sd(user_id)
+osio_client.get_user_topics_sd(user_id='')
 ```
 - Opens a SSE stream for a organisations' all public topics [NO-AUTH]
 ```python
-    osio_client.get_pub_org_topics_sd(org_id)
+    osio_client.get_pub_org_topics_sd(org_id='')
 ```
 - Opens a SSE stream for a public topic [NO-AUTH]
 ```python
-    osio_client.get_pub_topic_sd(topic)
+    osio_client.get_pub_topic_sd(topic='')
 ```
 - Opens a SSE stream for a users' all public topics [NO-AUTH]
 ```python
-    osio_client.get_pub_user_topics(user_id)
+    osio_client.get_pub_user_topics(user_id='')
 ```
 #### messages : Send messages
 - Post a message to a topic on behalf of a device
 ```python
-osio_client.send_msg_topic(topic):
+osio_client.send_msg_topic(topic=''):
 ```
 
 ## Documentation: 

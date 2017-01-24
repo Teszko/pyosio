@@ -26,10 +26,15 @@ $ pip install -r requirements.txt
 - You can store the username/api_key in a file "api_credentials.yml".
 
 ```py
-from osio import OpenSensorsAPI
-import yaml
-api_credentials = yaml.load(open("api_credentials.yml"))
-osio_client = OpenSensorsClient(api_credentials['user_id'], api_credentials['api_key'])
+from pyosio.osio import OpenSensorsAPI
+
+user_id = ""
+api_key = ""
+
+osio_client = OpenSensorsClient(user_id, api_key)
+
+print osio_client.who_am_i()
+
 ```
 ## API Structure
 

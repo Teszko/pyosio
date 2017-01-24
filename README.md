@@ -174,7 +174,7 @@ osio_client.get_dataset_meta(dataset_id='')
 ```python
 osio_client.get_pub_dataset_meta(dataset_id='')
 ```  
-#### users : User operations
+#### Messages : Stored messages
 - Get messages for a given device
 ```python
 osio_client.get_device_msgs(client_id='', queryparams={})
@@ -195,7 +195,7 @@ osio_client.get_pub_dataset_msgs(dataset_id='', queryparams={})
 ```python
 osio_client.get_bulk_pub_dataset_msgs(dataset_msgs_bulk_input={})
 ``` 
-#### users : User operations
+#### Users : User operations
 - Get public user metadata including topics [NO-AUTH]
 ```python
 osio_client.get_pub_user_meta(user_id='')
@@ -320,7 +320,7 @@ osio_client.get_user_topics(user_id='')
 ```python
 osio_client.delete_user_bulk_topics(user_id='')
 ```
-#### orgs : Organisation operations
+#### Orgs : Organisation operations
 - Create an organisation
 ```python
 osio_client.create_org(create_org_input={})
@@ -401,12 +401,12 @@ osio_client.get_org_stats(org_id='')
 ```python
 osio_client.get_pub_org_meta(org_id='')
 ```
-### schemas : Schema operations
+### Schemas : Schema operations
 - Get all the available schemas that can be applied to topics [NO-AUTH]
 ```python
 osio_client.get_schemas(org_id='')
 ```
-#### topics : Topic operations
+#### Topics : Topic operations
 
 - Get public topic information [NO-AUTH]
 ```python
@@ -432,7 +432,7 @@ osio_client.get_topic_meta(topic='')
 ```python
 osio_client.update_topic_meta(topic='', topic_input={})
 ```
-### projects : Project operations
+### Projects : Project operations
 - Get public project information [NO-AUTH]
 ```python
 osio_client.get_pub_proj_info(project_id='')
@@ -442,7 +442,7 @@ osio_client.get_pub_proj_info(project_id='')
 osio_client.get_pub_datasets(project_id='')
 ```
 ### OpenSensors Real-Time API
-#### events : SSE streams for device & dataset event
+#### Events : SSE streams for device & dataset event
 
 - Opens a SSE stream with debug events for a device
 ```python
@@ -452,7 +452,7 @@ osio_client.get_device_sd(client_id='')
 ```python
 osio_client.get_pub_sd(dataset_id='')
 ```
-#### events : SSE streams for device & message event
+#### Events : SSE streams for device & message event
 - Opens a SSE stream for all topics of an organisation
 ```python
 osio_client.get_org_topics_sd(org_id='')
@@ -481,7 +481,7 @@ osio_client.get_user_topics_sd(user_id='')
 ```python
     osio_client.get_pub_user_topics(user_id='')
 ```
-#### messages : Send messages
+#### Messages : Send messages
 - Post a message to a topic on behalf of a device
 ```python
 osio_client.send_msg_topic(topic=''):
